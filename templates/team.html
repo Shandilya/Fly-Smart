@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <title>Fly Smart</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="static/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
+	
+</head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+		  <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+			<a class="navbar-brand" id="site_name" href="index.html"><img id = "plane_img" src = "../static/images/Jumbo-07-june.gif" height = "40px" width = "40px"></span><b>  Fly Smart </b></a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/stats.html"><img src="../static/images/predict.png" height = "20px" width = "20px"> Predict Your Flight</a></li>
+          <li><a href="/trends.html"><img src="../static/images/trend.png" height = "20px" width = "20px"> Flight Trends</a></li>
+          <li><a href="/tweets.html"> <img src = "../static/images/twitter_bird.png" height = "20px" width = "20px"> Flight Tweets</a></li>
+          <li><a href="/feedback.html"><img src="../static/images/feedback.png" height = "20px" width = "20px"> Feedback</a></li>
+          <li><a href="/team.html"><img src="../static/images/team.png" height = "20px" width = "20px"> OurTeam</a></li>
+        </ul>
+    </div>
+		</div>
+	  </nav> 
+	
+  
+ <div class="container">
+    <br>
+    <br>
+    <br>
+   <!-- <div>
+      <img src="../static/images/Slide1.JPG" usemap="#image-map">
+
+      <map name="image-map">
+         <area target="_blank" alt="LinkedIn Saifee" title="LinkedIn Saifee" href="https://www.linkedin.com/in/saifee-dalal-91107249/" coords="777,344,1257,365" shape="rect">
+         <area target="_blank" alt="github saifee" title="github saifee" href="https://github.com/saifeedalal" coords="763,370,1135,390" shape="rect">
+         <area target="_blank" alt="email saifee" title="email saifee" href="mailto:saifee.dalal@gmail.com" coords="" shape="rect">
+      </map>
+   </div> -->
+
+   
+<div class="container">
+    <h2>Meet the FlySmart Team</h2>  
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+        <li data-target="#myCarousel" data-slide-to="5"></li>
+      </ol>
+  
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        
+          <div class="item active">
+              <img src="../static/images/Aparna.JPG" alt="Aparna" usemap="#image-map-aparna" style="width:100%;">
+  
+              <map name="image-map-aparna">
+                  <area target="_blank" alt="Aparna Github" title="Aparna Github" href="https://github.com/Bhowmik17" coords="534,317,633,374" shape="rect">
+                  <area target="_blank" alt="Aparna LinkedIn" title="Aparna LinkedIn" href="https://www.linkedin.com/in/aparna-paul-341b0b35/" coords="712,320,814,377" shape="rect">
+                  <area target="_blank" alt="Aparna email" title="Aparna email" href="mailto:aparnabh7@yahoo.com" coords="879,317,982,378" shape="rect">
+               </map>
+          </div>
+
+          <div class="item">
+              <img src="../static/images/Deepti.JPG" alt="Deepti" usemap="#image-map-deepti" style="width:100%;">
+  
+              <map name="image-map-deepti">
+                  <area target="_blank" alt="Deepti Github" title="Deepti Github" href="https://github.com/Shandilya" coords="527,290,624,345" shape="rect">
+                  <area target="_blank" alt="Deepti LinkedIn" title="Deepti LinkedIn" href="https://www.linkedin.com/in/deepti-shandilya-7754bb6/" coords="694,287,795,340" shape="rect">
+                  <area target="_blank" alt="Deepti E-mail" title="Deepti E-mail" href="mailto:deeptis.shandilya@gmail.com" coords="853,277,950,337" shape="rect">
+               </map>
+          </div>
+
+        <div class="item">
+            <img src="../static/images/Ghassan.JPG" alt="Ghassan" usemap="#image-map-ghassan" style="width:100%;">
+
+            <map name="image-map-ghassan">
+                <area target="_blank" alt="Ghassan Github" title="Ghassan Github" href="https://github.com/ghassan100/" coords="533,305,635,365" shape="rect">
+                <area target="_blank" alt="Ghassan LinkedIn" title="Ghassan LinkedIn" href="https://www.linkedin.com/in/ghassan-aleqabi-8baaaa8b/" coords="724,307,826,365" shape="rect">
+                <area target="_blank" alt="Ghassan e-mail" title="Ghassan e-mail" href="mailto:ghassan@seismo.wustl.edu" coords="893,309,997,365" shape="rect">
+             </map>
+        </div>
+
+        <div class="item">
+            <img src="../static/images/Randy.JPG" alt="Randy" usemap="#image-map-randy" style="width:100%;">
+
+            <map name="image-map-randy">
+                <area target="_blank" alt="GitHub Randy" title="GitHub Randy" href="https://github.com/Randy0601" coords="709,334,599,289" shape="rect">
+                <area target="_blank" alt="LinkedIn Randy" title="LinkedIn Randy" href="https://linkedin.com/in/randy-chan-0601  " coords="761,287,862,334" shape="rect">
+                <area target="_blank" alt="Email Randy" title="Email Randy" href="mailto:Randy0601@gmail.com" coords="923,291,1010,334" shape="rect">
+            </map>
+        </div>
+
+
+        <div class="item">
+          <img src="../static/images/saifee.JPG" alt="Saifee" usemap="#image-map-saifee" style="width:100%;">
+
+          <map name="image-map-saifee">
+              <area target="_blank" alt="Saifee Github" title="Saifee Github" href="https://github.com/saifeedalal" coords="599,289,696,347" shape="rect">
+              <area target="_blank" alt="Saifee LinkedIn" title="Saifee LinkedIn" href="https://www.linkedin.com/in/saifee-dalal-91107249/" coords="767,288,864,341" shape="rect">
+              <area target="_blank" alt="Saifee email" title="Saifee email" href="mailto:saifee.dalal@gmail.com" coords="921,287,1025,341" shape="rect">
+           </map>
+        </div>
+  
+        
+        <div class="item">
+            <img src="../static/images/Sandeep.JPG" alt="Sandeep" usemap="#image-map-sandeep" style="width:100%;">
+
+            <map name="image-map-sandeep">
+                <area target="_blank" alt="Sandeep GitHub" title="Sandeep GitHub" href="https://github.com/ksk4uever" coords="529,288,643,348" shape="rect">
+                <area target="_blank" alt="Sandeep LinkedIn" title="Sandeep LinkedIn" href="https://www.linkedin.com/in/sandy0589/" coords="710,286,822,346" shape="rect">
+                <area target="_blank" alt="Sandeep Email" title="Sandeep Email" href="mailto:sandeep.k@siu.edu" coords="865,284,961,344" shape="rect">
+             </map>
+        </div>
+
+      </div>
+  
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  
+
+ </div>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <title>Fly Smart</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="static/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
+	
+</head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+		  <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+			<a class="navbar-brand" id="site_name" href="index.html"><img id = "plane_img" src = "../static/images/Jumbo-07-june.gif" height = "40px" width = "40px"></span><b>  Fly Smart </b></a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+          <li><a href="/stats.html"><img src="../static/images/predict.png" height = "20px" width = "20px"> Predict Your Flight</a></li>
+          <li><a href="/trends.html"><img src="../static/images/trend.png" height = "20px" width = "20px"> Flight Trends</a></li>
+          <li><a href="/tweets.html"> <img src = "../static/images/twitter_bird.png" height = "20px" width = "20px"> Flight Tweets</a></li>
+          <li><a href="/feedback.html"><img src="../static/images/feedback.png" height = "20px" width = "20px"> Feedback</a></li>
+          <li><a href="/team.html"><img src="../static/images/team.png" height = "20px" width = "20px"> OurTeam</a></li>
+        </ul>
+    </div>
+		</div>
+	  </nav>   
+<div class="container">
+		<br>
+		<br>
+		<br>
+	<div class="row">
+
+		<div class="col-md-2">
+			<aside class="filters">
+				<div class="panel panel-default">
+					<div align="center" id = "panel_text" class="panel-heading"><b>TweetBoard</b></div>
+					<div class="panel-body">
+						<form>
+							<div class="form-group">
+								<ul class="list-group" id="filters">
+									<li class="filter list-group-item">
+										<label for="location">Flight Tweets</label>
+										<input class="form-control" id="keyword" type="text" placeholder="Flight">
+									</li>
+								</ul>
+							<button id="search-btn" type="submit" class="btn btn-default btn-md btn-block">Find Tweets</button>
+							<div id = "alert_placeholder"></div>
+							<!-- <button id="clear-btn" type="reset" class="btn btn-default btn-sm btn-block">Reset Table</button> -->
+						</form>
+					</div>
+				</div>
+			</aside>
+		<!-- <div class="review"></div> -->
+		</div>
+		<div class="col-md-10">
+			<div id="table-area" class="">
+				<table id="tweets-table" class="table table-striped" class="table table-bordered" class="table table-hover">
+					<thead id = "tablehead" class = "invisible">
+						<tr>
+							<th class="table-head" class="sorting">TweetedBy</th>
+							<th class="table-head">Mentions</th>
+							<th class="table-head">Text</th>
+							<th class="table-head">Created (GMT)</th>
+						</tr>
+					</thead>
+					<tbody class="table table-hover"></tbody>
+				</table>
+			</div>
+		</div>
+		</div>	
+	</div>
+</div>
+<script src="{{ url_for('static', filename='js/config.js') }}"></script>
+<script src="{{ url_for('static', filename='js/tweetslogic.js') }}"></script>
+</body>
+
+</html>

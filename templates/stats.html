@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <title>Fly Smart</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="static/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.1/lodash.min.js"></script>
+  <script src="https://unpkg.com/fuse.js@2.5.0/src/fuse.min.js"></script>
+  <script src="https://screenfeedcontent.blob.core.windows.net/html/airports.js"></script>
+
+	
+</head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+		  <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+			<a class="navbar-brand" id="site_name" href="index.html"><img id = "plane_img" src = "../static/images/Jumbo-07-june.gif" height = "40px" width = "40px"></span><b>  Fly Smart </b></a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/stats.html"><img src="../static/images/predict.png" height = "20px" width = "20px"> Predict Your Flight</a></li>
+          <li><a href="/trends.html"><img src="../static/images/trend.png" height = "20px" width = "20px"> Flight Trends</a></li>
+          <li><a href="/tweets.html"> <img src = "../static/images/twitter_bird.png" height = "20px" width = "20px"> Flight Tweets</a></li>
+          <li><a href="/feedback.html"><img src="../static/images/feedback.png" height = "20px" width = "20px"> Feedback</a></li>
+          <li><a href="/team.html"><img src="../static/images/team.png" height = "20px" width = "20px"> OurTeam</a></li>
+        </ul>
+    </div>
+		</div>
+	  </nav> 
+    <div class="container">
+      <br>
+      <br>
+      <br>
+      <div class="col-md-4">
+        <form>
+          <div class="form-group">
+
+              <label for="airline">Airline:</label>
+              <select class="form-control" id="airline">
+              <option>ANY</option>
+              <option>Alaska</option>
+              <option>Allegiant</option>
+              <option>American</option>
+              <option>American Eagle</option>
+              <option>Atlantic Southeast</option>
+              <option>Comair</option>
+              <option>Delta</option>
+              <option>Frontier</option>
+              <option>Hawaiian</option>
+              <option>Jetblue</option>
+              <option>Mesa</option>
+              <option>Midwest</option>
+              <option>Pinnacle</option>
+              <option>Skywest</option>
+              <option>Southwest</option>
+              <option>Spirit</option>
+              <option>United</option>
+              <option>Virgin</option>
+            </select>
+          </div>
+          
+          <div class="form-group" class="required">
+              <label class="control-label">Departure Airport:</label>
+              <input type="text" class="form-control" id="depairport" placeholder="STL" required />
+          </div>
+          <div class="form-group" class="required">
+            <label class="control-label">Arrival Airport:</label>
+            <input type="text" class="form-control" id="arrairport" required placeholder="DFW"/>
+        </div>
+          <div class="form-group" class="required">
+              <label for="datetime">Date:</label>
+              <input type="date" class="form-control" required id="date"/>
+          </div>
+          <div class="form-group">
+              <label for="time">Time:</label>
+              <select class="form-control" id="time">
+              <option>Early Morning (00:00 - 06:59 CST)</option>
+              <option>Morning (07:00 - 11:59 CST)</option>
+              <option>Afternoon (12:00 - 15:59 CST)</option>
+              <option>Evening (16:00 - 18:59 CST)</option>
+              <option>Late Evening (19:00 - 20:59 CST)</option>
+              <option>Night (21:00 - 23:59 CST)</option>
+              </select>
+          </div>
+          <button id = "submit_btn" type="submit" class="btn btn-default" onclick="">Predict</button>
+        </form>
+      </div>
+      <div class="col-md-8">
+          <div id="myProgress" class = "invisible">
+              <div id="myBar"></div>
+            </div>
+          <div id = "result_placeholder"></div>
+      </div>
+    </div>
+  
+    
+
+
+  <!-- D3 JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.3/d3.min.js"></script>
+  <!-- Our JavaScript -->
+  <script type="text/javascript" src="{{url_for('static', filename='js/arrairport.js')}}"></script>
+  <script type="text/javascript" src="{{url_for('static', filename='js/depairport.js')}}"></script>
+  <script src="{{url_for('static', filename='js/statslogic.js')}}"></script>
+
+
+</body>
+
+  </html>

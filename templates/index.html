@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <title>Fly Smart</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="static/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
+	
+</head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+		  <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+			<a class="navbar-brand" id="site_name" href="index.html"><img id = "plane_img" src = "../static/images/Jumbo-07-june.gif" height = "40px" width = "40px"></span><b>  Fly Smart </b></a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+		  <ul class="nav navbar-nav navbar-right">
+				<li><a href="/stats.html"><img src="../static/images/predict.png" height = "20px" width = "20px"> Predict Your Flight</a></li>
+				<li><a href="/trends.html"><img src="../static/images/trend.png" height = "20px" width = "20px"> Flight Trends</a></li>
+				<li><a href="/tweets.html"> <img src = "../static/images/twitter_bird.png" height = "20px" width = "20px"> Flight Tweets</a></li>
+        <li><a href="/feedback.html"><img src="../static/images/feedback.png" height = "20px" width = "20px"> Feedback</a></li>
+        <li><a href="/team.html"><img src="../static/images/team.png" height = "20px" width = "20px"> OurTeam</a></li>
+      </ul>
+    </div>
+		</div>
+	  </nav> 
+	
+  
+ <div class="container">
+    <br>
+    <br>
+    <br>
+   <div class="jumbotron text-center" id="bg-image">
+   </div>
+
+   <!-- Coffee News And Images -->
+   <div class="row" id="final_data">
+     <div class="col-md-6">
+       <h2 class="heading"><b><u>On-time Flight Performance</u></b></h2>
+       <br>
+       <p>Flight cancellation and delay is a very common problem in the real world. 
+         It can have a negatively financial impact both the airlines and passengers. 
+         Furthermore, it will also impact personal scheduled events and commitments. 
+         A passenger who is delayed on a multi-plane trip could miss a connecting flight. 
+
+         <br>
+         <br>
+         <b>Key Impacts:</b>
+
+          <ul>
+            <li>Bad customer satisfaction</li>
+            <li>Financial losses and negative reputation for airlines</li>
+            <li>Inconvenience for passengers and impacting personal scheduled events</li>
+          </ul>  
+        </p>
+
+        <h2 class="heading"><b><u>How do we predict flight delays?</u></b></h2>
+        <br>
+        <p>
+          We have developed a prediction model using machine learning by incorporating millions of historic records. 
+          Predictions based on past history can never be perfect, so we can't guarantee they'll be correct.
+          Our model is currently running with an approximately <span style="color:blue"><b>77%</b></span> accuracy. 
+          As we contine to enhance our model with added features and more data, the accuracy will improve.
+        </p>
+
+     </div>
+     <div class="col-md-6">
+       <br>
+       <br>
+        <center><img src="../static/images/angry-airline-passengers.png" height="300" width="300" hspace="20" ></center><br><br>
+      </div>
+   </div>
+
+ </div>
+</body>
+
+</html>
